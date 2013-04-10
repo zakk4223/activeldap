@@ -223,7 +223,7 @@ module ActiveLdap
       end
 
       def gem_available?(name)
-        not Gem::Specification.find_all_by_name(name).empty?
+        Gem.available?(name)
       end
     end
 
